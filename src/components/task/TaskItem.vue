@@ -9,6 +9,9 @@
       {{ item.description }}
     </a-space>
     <a-space :size="[0, 'small']" wrap vertical="true">
+      {{ item.status === 'active' ? 'В работе' : 'Выполнено' }}
+    </a-space>
+    <a-space :size="[0, 'small']" wrap vertical="true">
       <a-tag v-for="tag in item.tags" :bordered="false" color="processing">{{ tag.name }}</a-tag>
     </a-space>
     <a-space :size="[0, 'small']" wrap vertical="true">
